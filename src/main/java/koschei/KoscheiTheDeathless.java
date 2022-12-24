@@ -4,7 +4,7 @@ import koschei.models.Ocean1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("koscheiTheDeathless")
 public class KoscheiTheDeathless {
 
     private Ocean1 ocean;
@@ -13,7 +13,7 @@ public class KoscheiTheDeathless {
         return "На свете есть океан , " + ocean.toString();
     }
 
-    @Autowired
+    @Autowired //Кощей связан с океаном через сеттер
     public void setOcean(Ocean1 ocean) {
         this.ocean = ocean;
     }
